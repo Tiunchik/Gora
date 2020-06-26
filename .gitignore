@@ -55,3 +55,4 @@ holidays.iml
 # all compalied angular files
 /server/src/main/resources/static/*
 /gora.iml
+/database.sqlite"
