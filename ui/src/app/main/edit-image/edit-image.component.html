@@ -1,0 +1,14 @@
+<main>
+  <div class="container">
+    <br>
+    <form [formGroup]="form">
+      <input type="file" class="form-control" name="bytes" (change)="loadBytes($event)" accept="image/*">
+    </form>
+    <ng-container *ngIf="showPreview">
+      <div style="text-align: center;">
+        <img [src]="previewImage" class="mx-auto d-block rounded img-fluid" width="500px" height="500px" alt="">
+        <button type="button" class="btn btn-light" (click)="submitImage()" [disabled]="valid">Submit</button>
+      </div>
+    </ng-container>
+  </div>
+</main>

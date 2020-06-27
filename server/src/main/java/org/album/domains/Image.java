@@ -1,25 +1,18 @@
 package org.album.domains;
 
-
-import javax.persistence.*;
 import java.util.Objects;
 
-@Entity
-@Table(name = "image")
 public class Image {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
-    @Column(nullable = false)
     private byte[] image;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

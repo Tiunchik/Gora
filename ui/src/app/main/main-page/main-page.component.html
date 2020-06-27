@@ -1,0 +1,29 @@
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Gallery</h1>
+      <p class="lead text-muted">There will be only things that you choose here</p>
+      <p class="lead text-muted">Your CHOICE - your LIFE</p>
+    </div>
+  </section>
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4" *ngFor="let img of imageID">
+          <div class="card mb-4 shadow-sm">
+            <img [src]="loadImage(img)" class="mx-auto d-block rounded img-fluid zoom img-thumbnail rounded" style="width:400px;height:300px;" alt="">
+            <div class="card-body">
+              <div class="d-flex justify-content-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" (click)="editImage(img)">Edit</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" (click)="deleteImage(img)">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
